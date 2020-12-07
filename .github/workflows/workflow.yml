@@ -42,7 +42,7 @@ jobs:
       run: doctl registry kubernetes-manifest | kubectl apply -f -
       
     - name: Reference the secret you just uploaded as an imagePullSecrets
-      run: kubectl patch serviceaccount default -p '{"imagePullSecrets": [{"name": "registry-sdas"}]}'
+      run: kubectl patch serviceaccount default -p '{"imagePullSecrets"&#58; [{"name"&#58; "registry-sdas"}]}'
 
     - name: Deploy to DigitalOcean Kubernetes
       run: kubectl apply -f $GITHUB_WORKSPACE/config/deployment.yml
