@@ -30,7 +30,7 @@ spec:
           limits:
             cpu: 100m
       imagePullSecrets:
-      - name: sdas
+      - name: 
 ---
 apiVersion: v1
 kind: Service
