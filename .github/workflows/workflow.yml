@@ -52,7 +52,9 @@ jobs:
 
     - name: Save DigitalOcean kubeconfig with short-lived credentials
       run: doctl kubernetes cluster kubeconfig save --expiry-seconds 600 mycluster
-      
+    
+    # If you haven't already integrated with your registry and only want workloads in a particular namespace to be able to pull 
+    # from your registry, uncomment the next two commands.
     #- name: Upload credentials of your registry to your DigitalOcean Kubernetes cluster
     #  run: doctl registry kubernetes-manifest | kubectl apply -f -
       
